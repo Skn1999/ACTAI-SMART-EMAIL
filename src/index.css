@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #303035;
+  --ink-strong: #16161a;
+  --panel: #f2f0ec;
+  --chip: #e3dfd9;
+  --muted: #94949b;
+  --rule: #e6e4e0;
+  --surface: #efede9;
+  --logo-invert: 0;
+  --exit: 0.14s;
+  --enter: 0.26s;
+  --move: 0.42s;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --default-transition-duration: 0.15s;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"],
+:root.dark {
+  --background: #0b0b0c;
+  --foreground: #d6d4cf;
+  --ink-strong: #ffffff;
+  --panel: #1f1f1f;
+  --chip: #3a3a3a;
+  --muted: #83838a;
+  --rule: #26262a;
+  --surface: #1b1b1f;
+  --logo-invert: 1;
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--rule);
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Archivo', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page mount transition */
+.page-body {
+  animation: var(--enter) var(--ease) both fade-in, var(--move) var(--ease) both rise;
+}
+
+/* Skeleton loader helper */
+.skeleton {
+  background-color: var(--surface);
+  animation: pulse 1.6s var(--ease) infinite;
+  border-radius: 4px;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .page-body, body {
+    animation: none !important;
+  }
+}
