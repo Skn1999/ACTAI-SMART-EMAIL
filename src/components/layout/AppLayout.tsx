@@ -8,7 +8,7 @@ export interface AppLayoutProps {
 
 export const AppLayout: React.FC<AppLayoutProps> = ({ children, className = '' }) => {
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased selection:bg-ink-strong selection:text-background page-body">
+    <div className="min-h-screen bg-background text-foreground antialiased selection:bg-ink-strong selection:text-background">
       {/* AppRail handles fixed left rail on >= 1140px and top header on < 1140px */}
       <AppRail />
 

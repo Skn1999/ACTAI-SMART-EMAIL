@@ -31,7 +31,7 @@ export const AppRail: React.FC<AppRailProps> = ({ className = '' }) => {
     <>
       {/* 1. Desktop Fixed Left Rail (docked >= 1140px / rail breakpoint) */}
       <aside
-        className={`fixed top-7 left-7 z-20 w-[200px] hidden rail:flex flex-col justify-between h-[calc(100vh-3.5rem)] ${className}`}
+        className={`fixed top-7 left-7 z-20 w-[200px] hidden rail:flex flex-col justify-between h-[calc(100vh-3.5rem)] overflow-y-auto pr-1 ${className}`}
         aria-label="Application Rail"
       >
         {/* Top: Logo & Indexed Navigation */}

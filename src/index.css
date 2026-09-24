@@ -51,7 +51,7 @@ body {
 
 /* Page mount transition */
 .page-body {
-  animation: var(--enter) var(--ease) both fade-in, var(--move) var(--ease) both rise;
+  animation: var(--enter) var(--ease) both fade-in;
 }
 
 /* Skeleton loader helper */
