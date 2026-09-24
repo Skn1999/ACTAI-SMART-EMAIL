@@ -46,6 +46,35 @@ export interface TaskException {
   state: string;
 }
 
+export type AgentAvatarType =
+  | 'clover'
+  | 'flower'
+  | 'triangle'
+  | 'square'
+  | 'blob'
+  | 'ghost'
+  | 'circle'
+  | 'drop'
+  | 'star'
+  | 'droid'
+  | 'mech'
+  | 'alien'
+  | 'hexagon'
+  | 'cat'
+  | 'cloud'
+  | 'pill'
+  | 'pebble'
+  | 'puddle';
+
+export interface TaskAgent {
+  name: string;
+  role: string;
+  avatarType: AgentAvatarType;
+  threadTitle: string;
+  threadRecipient?: string;
+  category: 'procurement' | 'operations' | 'finance' | 'general';
+}
+
 export interface Task {
   id: string;
   title: string;
@@ -60,4 +89,5 @@ export interface Task {
   draftContent?: string;
   updatedAt?: string;
   nextAction?: string;
+  agent?: TaskAgent;
 }

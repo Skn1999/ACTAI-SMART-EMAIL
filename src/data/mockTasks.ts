@@ -162,6 +162,14 @@ export const initialTasks: Task[] = [
     decisionOptions: nordicDecisionOptions,
     updatedAt: '10:03',
     nextAction: 'Waiting for your direction — no reply has been sent.',
+    agent: {
+      name: 'Atlas',
+      role: 'Procurement & Vendor Negotiation Agent',
+      avatarType: 'mech',
+      threadTitle: 'Re: Revised quote request - Modular Exhibition Display',
+      threadRecipient: 'Sofia Lindqvist <s.lindqvist@nordicdisplays.se>',
+      category: 'procurement',
+    },
   },
   {
     id: 'confirm-catering',
@@ -198,6 +206,14 @@ export const initialTasks: Task[] = [
     evidenceIds: [],
     updatedAt: '08:45',
     nextAction: 'Awaiting headcount from design team',
+    agent: {
+      name: 'Clover',
+      role: 'Operations & Event Logistics Agent',
+      avatarType: 'flower',
+      threadTitle: 'Friday Team Offsite — Dietary & Headcount Confirmation',
+      threadRecipient: 'Stockholm Catering Co. <events@nordiccatering.se>',
+      category: 'operations',
+    },
   },
   {
     id: 'collect-receipts',
@@ -234,5 +250,13 @@ export const initialTasks: Task[] = [
     evidenceIds: [],
     updatedAt: '08:00',
     nextAction: 'Scanning expense inbox',
+    agent: {
+      name: 'Audit',
+      role: 'Finance & Expense Reconciliation Agent',
+      avatarType: 'droid',
+      threadTitle: 'September Travel Expenses & Corporate Card Reconciliation',
+      threadRecipient: 'Finance Ops <expenses@company.com>',
+      category: 'finance',
+    },
   },
 ];
